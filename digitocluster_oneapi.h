@@ -8,7 +8,7 @@ class Output;
 
 namespace oneapi{
 
-  void Digitocluster(const Input* input_d,
+  void digitocluster(const Input* input_d,
                      Output* output_d,
                      const uint32_t wordCounter,
                      bool useQualityInfo,
