@@ -9,7 +9,7 @@
 #include "modules.h"
 #include "output.h"
 #include "digitocluster_oneapi.h"
-#include "gpuCalibPixel.h"
+#include "kernel/gpuCalibPixel.h"
 
 namespace oneapi {
 
@@ -48,7 +48,7 @@ namespace oneapi {
     queue.submit([&](cl::sycl::handler& cgh) {
       cgh.parallel_for<calibDigis_kernel_>(
           cl::sycl::nd_range<1>{{threads}, {blockSize}}, [=](cl::sycl::nd_item<1> item) {
-            calibDigis_kernel(item, input_d, output_d,
+            calibDigis_kernel(item, input_d, output_d, gains,
                               clusters_d_moduleStart,
                               clusters_d_clusInModule,
                               clusters_d_clusModuleStart);
