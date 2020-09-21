@@ -1,5 +1,5 @@
-#ifndef rawtodigi_oneapi_h_
-#define rawtodigi_oneapi_h_
+#ifndef digitocluster_oneapi_h_
+#define digitocluster_oneapi_h_
 
 #include <CL/sycl.hpp>
 
@@ -23,6 +23,6 @@ namespace oneapi{
 #endif
 } //namespace oneapi
 
-#endif  // rawtodigi_oneapi_h_
+#endif  // digitocluster_oneapi_h_
 
 
